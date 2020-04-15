@@ -21,7 +21,7 @@ class App extends Component {
 					text: "umyc samochod",
 					date: "2020-04-20",
 					important: true,
-					active: true,
+					active: false,
 					finishDate: null,
 				},
 				{

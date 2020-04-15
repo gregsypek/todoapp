@@ -4,7 +4,7 @@ const Task = (props) => {
 	const importantStyle = {
 		color: "red",
 	};
-	const { text, date, id, important, finishDate } = props.task;
+	const { text, date, id, important } = props.task;
 	return (
 		<tr>
 			<th style={important ? importantStyle : null}>{text}</th>

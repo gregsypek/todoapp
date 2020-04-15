@@ -43,12 +43,29 @@ class App extends Component {
 			],
 		};
 	}
+
+	deleteTask = (id) => {
+		const tasks = [...this.state.tasks];
+		const index = tasks.findIndex((task) => task.id === id);
+		tasks.splice(index, 1);
+
+		this.setState({
+			tasks,
+		});
+	};
+	changetaskStatus = (id) => {
+		console.log("zmieniono status" + id);
+	};
 	render() {
 		return (
 			<div>
 				TODOAPP
 				<AddTask />
-				<TaskList tasks={this.state.tasks} />
+				<TaskList
+					tasks={this.state.tasks}
+					delete={this.deleteTask}
+					change={this.changetaskStatus}
+				/>
 			</div>
 		);
 	}

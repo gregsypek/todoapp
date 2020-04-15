@@ -1,5 +1,6 @@
 import React from "react";
 import Task from "./Task";
+import TaskDone from "./TaskDone";
 
 const TaskList = (props) => {
 	const active = props.tasks.filter((task) => task.active);
@@ -13,9 +14,10 @@ const TaskList = (props) => {
 		/>
 	));
 	// do zaimplementowania na osobnej stronie
+
 	const done = props.tasks.filter((task) => !task.active);
 	const doneTasks = done.map((task) => (
-		<Task
+		<TaskDone
 			key={task.id}
 			task={task}
 			tasks={props.tasks}
@@ -46,8 +48,8 @@ const TaskList = (props) => {
 					<thead>
 						<tr>
 							<th>Zadania zrobione</th>
-							<th>Do kiedy...</th>
-							<th>Zrobione</th>
+							<th>Do kiedy było...</th>
+							<th>Zrobiono dnia...</th>
 							<th>Usuń</th>
 						</tr>
 					</thead>

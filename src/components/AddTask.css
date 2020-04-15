@@ -1,0 +1,8 @@
+input[type="text"],
+input[type="checkbox"],
+input[type="date"] {
+	margin-right: 10px;
+}
+.form {
+	margin: 10px;
+}

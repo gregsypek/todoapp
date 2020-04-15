@@ -68,7 +68,6 @@ class App extends Component {
 	render() {
 		return (
 			<div>
-				TODOAPP
 				<AddTask />
 				<TaskList
 					tasks={this.state.tasks}

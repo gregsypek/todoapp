@@ -1,4 +1,6 @@
 import React, { Component} from 'react';
+import AddTask from './AddTask';
+import TaskList from './TaskList';
 
 import './App.css';
 class App extends Component {
@@ -7,8 +9,12 @@ class App extends Component {
     this.state = {  }
   }
   render() { 
-    return ( 
-      <div>TODOAPP</div>
+    return ( <div>
+
+      TODOAPP
+      <AddTask />
+      <TaskList />
+    </div>
      );
   }
 }

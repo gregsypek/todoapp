@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 import AddTask from "./AddTask";
-import TaskList from "./TaskList";
+import TasksHome from "./TasksHome";
+import TasksHistory from "./TasksHistory";
+import Navigation from "./Navigation";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import "./App.css";
+import "../styles/App.css";
 class App extends Component {
+	//ustaw counter na podstawie tablicy
 	counter = 9;
 	constructor(props) {
 		super(props);
@@ -86,14 +90,50 @@ class App extends Component {
 	};
 	render() {
 		return (
-			<div>
-				<AddTask add={this.addTask} />
-				<TaskList
-					tasks={this.state.tasks}
-					delete={this.deleteTask}
-					change={this.changeTaskStatus}
-				/>
-			</div>
+			<Router>
+				<div className="app">
+					<Navigation />
+					<header>{<AddTask add={this.addTask} />}</header>
+					<main>
+						<aside></aside>
+						<Switch>
+							<Route
+								path="/"
+								exact
+								render={() => (
+									<TasksHome
+										tasks={this.state.tasks}
+										delete={this.deleteTask}
+										change={this.changeTaskStatus}
+									/>
+								)}
+							/>
+							<Route
+								path="/history"
+								render={() => (
+									<TasksHistory
+										tasks={this.state.tasks}
+										delete={this.deleteTask}
+										// change={this.changeTaskStatus}
+									/>
+								)}
+							/>
+							<Route
+								render={() => (
+									<TasksHome
+										tasks={this.state.tasks}
+										delete={this.deleteTask}
+										// change={this.changeTaskStatus}
+									/>
+								)}
+							/>
+						</Switch>
+					</main>
+					<footer>
+						<small>&copy; Copyright 2020 gregsypek</small>
+					</footer>
+				</div>
+			</Router>
 		);
 	}
 }

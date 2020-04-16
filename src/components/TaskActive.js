@@ -1,6 +1,6 @@
 import React from "react";
 
-const Task = (props) => {
+const TaskActive = (props) => {
 	const importantStyle = {
 		color: "red",
 	};
@@ -19,4 +19,4 @@ const Task = (props) => {
 	);
 };
 
-export default Task;
+export default TaskActive;

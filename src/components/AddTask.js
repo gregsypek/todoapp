@@ -61,13 +61,14 @@ class AddTask extends Component {
 					id="important"
 					onChange={this.handleCheck}
 				/>
-				<label htmlFor="important">Priorytet</label>
+				<label htmlFor="important">priorytet</label>
 				<input
 					type="date"
 					value={this.state.date}
 					min={this.minDate}
 					max={maxDate}
 					onChange={this.handleDate}
+					id="date"
 				/>
 				<label htmlFor="date">do kiedy...</label>
 				<button onClick={this.handleClick}>dodaj</button>

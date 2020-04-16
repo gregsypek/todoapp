@@ -91,47 +91,49 @@ class App extends Component {
 	render() {
 		return (
 			<Router>
-				<div className="app">
-					<Navigation />
-					<header>{<AddTask add={this.addTask} />}</header>
-					<main>
-						<aside></aside>
-						<Switch>
-							<Route
-								path="/"
-								exact
-								render={() => (
-									<TasksHome
-										tasks={this.state.tasks}
-										delete={this.deleteTask}
-										change={this.changeTaskStatus}
-									/>
-								)}
-							/>
-							<Route
-								path="/history"
-								render={() => (
-									<TasksHistory
-										tasks={this.state.tasks}
-										delete={this.deleteTask}
-										// change={this.changeTaskStatus}
-									/>
-								)}
-							/>
-							<Route
-								render={() => (
-									<TasksHome
-										tasks={this.state.tasks}
-										delete={this.deleteTask}
-										// change={this.changeTaskStatus}
-									/>
-								)}
-							/>
-						</Switch>
-					</main>
-					<footer>
-						<small>&copy; Copyright 2020 gregsypek</small>
-					</footer>
+				<div className="container">
+					<div className="app ">
+						<Navigation />
+						<header>{<AddTask add={this.addTask} />}</header>
+						<main>
+							<aside></aside>
+							<Switch>
+								<Route
+									path="/"
+									exact
+									render={() => (
+										<TasksHome
+											tasks={this.state.tasks}
+											delete={this.deleteTask}
+											change={this.changeTaskStatus}
+										/>
+									)}
+								/>
+								<Route
+									path="/history"
+									render={() => (
+										<TasksHistory
+											tasks={this.state.tasks}
+											delete={this.deleteTask}
+											// change={this.changeTaskStatus}
+										/>
+									)}
+								/>
+								<Route
+									render={() => (
+										<TasksHome
+											tasks={this.state.tasks}
+											delete={this.deleteTask}
+											// change={this.changeTaskStatus}
+										/>
+									)}
+								/>
+							</Switch>
+						</main>
+						<footer>
+							<small>&copy; Copyright 2020 gregsypek</small>
+						</footer>
+					</div>
 				</div>
 			</Router>
 		);

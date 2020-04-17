@@ -1,5 +1,5 @@
 import React from "react";
-
+import x from "../images/usun.svg";
 const TaskDone = (props) => {
 	const { text, date, id, finishDate } = props.task;
 	const finish = new Date(finishDate).toLocaleDateString();
@@ -9,7 +9,9 @@ const TaskDone = (props) => {
 			<td>{date}</td>
 			<td>{finish}</td>
 			<td>
-				<button onClick={() => props.delete(id)}>X</button>
+				<button onClick={() => props.delete(id)}>
+					<img class="x" src={x} alt={`x button ${x}`} />
+				</button>
 			</td>
 		</tr>
 	);

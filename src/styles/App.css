@@ -1,36 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;1,400;1,700&display=swap");
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-
-    font-family: 'Lobster Two', cursive, 'sans-serif';
-    font-size: 1.2rem;
-    color: white;
+	font-family: "Lobster Two", cursive, "sans-serif";
+	font-size: 1.2rem;
+	color: white;
 }
 
 .container {
-    display: flex;
-    min-height: 100vh;
+	display: flex;
+	min-height: 100vh;
 }
 
 .app {
-    max-width: 1200px;
-    min-height: 90vh;
-    margin: 0 auto;
-    align-self: center;
-    box-shadow: 0px 5px 16px #3F3D56;
-    background-color: #E5E5E5;
-    display: flex;
-    flex-direction: column;
+	max-width: 1200px;
+	max-height: 90vh;
+	margin: 0 auto;
+	align-self: center;
+	box-shadow: 0px 5px 16px #3f3d56;
+	background-color: #e5e5e5;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
 }

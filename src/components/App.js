@@ -4,8 +4,11 @@ import TasksHome from "./TasksHome";
 import TasksHistory from "./TasksHistory";
 import Navigation from "./Navigation";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import image from "../images/image2.svg";
+import logo from "../images/logo.svg";
 
 import "../styles/App.css";
+import "../styles/Main.css";
 class App extends Component {
 	//ustaw counter na podstawie tablicy
 	counter = 9;
@@ -95,41 +98,46 @@ class App extends Component {
 					<div className="app ">
 						<Navigation />
 						<header>{<AddTask add={this.addTask} />}</header>
-						<main>
-							<aside></aside>
-							<Switch>
-								<Route
-									path="/"
-									exact
-									render={() => (
-										<TasksHome
-											tasks={this.state.tasks}
-											delete={this.deleteTask}
-											change={this.changeTaskStatus}
-										/>
-									)}
-								/>
-								<Route
-									path="/history"
-									render={() => (
-										<TasksHistory
-											tasks={this.state.tasks}
-											delete={this.deleteTask}
-											// change={this.changeTaskStatus}
-										/>
-									)}
-								/>
-								<Route
-									render={() => (
-										<TasksHome
-											tasks={this.state.tasks}
-											delete={this.deleteTask}
-											// change={this.changeTaskStatus}
-										/>
-									)}
-								/>
-							</Switch>
-						</main>
+						<section>
+							<aside>
+								<img class="logo" src={logo} alt={`logo ${logo}`} />
+								<img class="img" src={image} alt={`picutre ${image}`} />
+							</aside>
+							<main>
+								<Switch>
+									<Route
+										path="/"
+										exact
+										render={() => (
+											<TasksHome
+												tasks={this.state.tasks}
+												delete={this.deleteTask}
+												change={this.changeTaskStatus}
+											/>
+										)}
+									/>
+									<Route
+										path="/history"
+										render={() => (
+											<TasksHistory
+												tasks={this.state.tasks}
+												delete={this.deleteTask}
+												// change={this.changeTaskStatus}
+											/>
+										)}
+									/>
+									<Route
+										render={() => (
+											<TasksHome
+												tasks={this.state.tasks}
+												delete={this.deleteTask}
+												// change={this.changeTaskStatus}
+											/>
+										)}
+									/>
+								</Switch>
+							</main>
+						</section>
 						<footer>
 							<small>&copy; Copyright 2020 gregsypek</small>
 						</footer>

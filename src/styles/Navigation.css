@@ -1,21 +1,18 @@
 nav ul {
-    display: flex;
-    list-style: none;
-    margin-left: 2rem;
-
+	display: flex;
+	list-style: none;
+	margin-left: 2rem;
 }
 
 nav a {
-    display: block;
-    color: #3F3D56;
-    padding: 1rem;
-    text-decoration: none;
-    cursor: pointer;
-    font-style: italic;
-
+	display: block;
+	color: #3f3d56;
+	padding: 1rem;
+	text-decoration: none;
+	cursor: pointer;
+	font-style: italic;
 }
 
 nav a:hover {
-    color: #57B894;
-
+	color: #57b894;
 }

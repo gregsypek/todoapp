@@ -1,60 +1,67 @@
 .form {
-    display: flex;
-    padding: 1rem;
-    align-items: center;
+	display: flex;
+	padding: 1rem;
+	align-items: center;
+	justify-content: flex-end;
 }
 
 input[type="text"],
 input[type="date"] {
-    background-color: #3F3D56;
-    color: #F2F2F2;
-    border: 4px solid #3F3D56;
-    padding: .2rem 1.2rem;
+	background-color: #3f3d56;
+	color: #f2f2f2;
+	border: 4px solid #3f3d56;
+	padding: 0.2rem 1.2rem;
 
-    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    text-align: center;
-    margin-right: 1rem;
-    height: 2rem;
-    outline: none;
+	box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+	text-align: center;
+	margin-right: 3rem;
+	height: 2rem;
+	outline: none;
 }
 
 ::placeholder {
-    color: #F2F2F2;
+	color: #f2f2f2;
+	font-size: 0.8rem;
 }
 
-input[type="date"],
+input[type="date"] {
+	margin-right: 3rem;
+}
+
 input[type="checkbox"] {
-    margin-right: 1rem;
+	margin-right: 1rem;
 }
 
 label {
-    color: #2F2E41;
-    margin-right: 1rem;
-    font-style: italic;
+	color: #2f2e41;
+	margin-right: 3rem;
+	font-style: italic;
 }
 
 .form button {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.2rem;
-    line-height: 30px;
-    width: 8rem;
-    height: 2rem;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    transition: .2s;
-    color: #2F2E41;
-    background: #F2F2F2;
-    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    text-transform: uppercase;
-    font-family: inherit;
-    padding: .2rem 1.2rem;
-    text-align: center;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1.1rem;
+	line-height: 30px;
+	width: 8rem;
+	height: 2rem;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	transition: 0.2s;
+	color: #2f2e41;
+	background: #f2f2f2;
+	box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+	text-transform: uppercase;
+	font-family: inherit;
+	padding: 0.2rem 1.2rem;
+	text-align: center;
+	margin-right: 2rem;
 }
 
 .form button:hover {
-    background-color: #57B894;
+	background-color: #57b894;
+	color: #f2f2f2;
 }

@@ -1,0 +1,8 @@
+footer small {
+    color: #3f3d56;
+    font-size: .6rem;
+    padding: .5rem;
+    margin-right: 2.5rem;
+    display: flex;
+    justify-content: flex-end;
+}

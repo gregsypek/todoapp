@@ -10,7 +10,7 @@ const TaskDone = (props) => {
 			<td>{finish}</td>
 			<td>
 				<button onClick={() => props.delete(id)}>
-					<img class="x" src={x} alt={`x button ${x}`} />
+					<img className="x" src={x} alt={`x button ${x}`} />
 				</button>
 			</td>
 		</tr>

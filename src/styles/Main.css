@@ -1,71 +1,158 @@
 section {
-	display: flex;
+    display: flex;
 }
 
 aside {
-	display: flex;
-	flex-basis: 30%;
-	flex-direction: column;
-	overflow: hidden;
-	align-content: stretch;
-	/* flex: 1; */
-	justify-content: space-between;
+    display: flex;
+    flex-basis: 30%;
+    flex-direction: column;
+    overflow: hidden;
+    align-content: stretch;
+    justify-content: space-between;
 }
 
 main {
-	width: 90%;
+    position: relative;
+    z-index: 2;
+    width: 90%;
 }
 
 .logo {
-	width: 11rem;
-	height: 5rem;
+    width: 12rem;
+    height: 6rem;
 }
 
 .img {
-	height: 44vh;
+    height: 44vh;
 }
 
-/*  stylowanie tabeli */
+/*  stylowanie tabel wspolne */
 
 table {
-	margin-top: 2rem;
-	width: 90%;
-	font-style: italic;
-	font-weight: normal;
-}
 
-thead > tr {
-	line-height: 3rem;
-}
-
-tbody > tr > th {
-	text-align: left;
-	padding-left: 0.5rem;
-}
-
-tbody {
-	font-weight: normal;
+    margin-top: 2rem;
+    width: 90%;
+    font-style: italic;
+    font-weight: normal;
+    border-collapse: collapse;
+    table-layout: fixed;
 }
 
 td {
-	text-align: center;
+    letter-spacing: 1px;
+    padding: 5px;
 }
 
-tbody > t thead,
-tr:nth-of-type(1n) {
-	background-color: #3f3d56;
+tbody td {
+    text-align: center;
 }
 
-tr:nth-of-type(2n) {
-	/* background-color: #3f3d56; */
-	opacity: 0.85;
+
+thead>tr {
+    line-height: 3rem;
+    color: #57B894;
 }
 
+tbody>tr>th {
+    text-align: left;
+    padding-left: 0.5rem;
+}
+
+td {
+    text-align: center;
+}
+
+tbody>tr:nth-of-type(1n) {
+    background-color: #E5E5E5;
+    color: #3f3d56;
+}
+
+tbody>tr:nth-of-type(2n) {
+    background-color: #3f3d56;
+    opacity: 0.85;
+    color: #E5E5E5;
+}
+
+
+/* stylowanie tabeli tbl-1 */
+.tbl-1 thead {
+    background-color: #3F3D56;
+
+}
+
+.tbl-1 thead th:nth-child(1) {
+    width: 50%;
+    text-align: left;
+    padding-left: 0.5rem;
+}
+
+.tbl-1 thead th:nth-child(2) {
+    width: 20%;
+}
+
+.tbl-1 thead th:nth-child(3) {
+    width: 10%;
+}
+
+.tbl-1 thead th:nth-child(4) {
+    width: 10%;
+}
+
+
+/* stylowanie tabeli tbl-2 */
+
+.tbl-2 thead {
+    background-color: #3F3D56;
+
+}
+
+.tbl-2 thead th:nth-child(1) {
+    width: 50%;
+    text-align: left;
+    padding-left: 0.5rem;
+}
+
+.tbl-2 thead th:nth-child(2) {
+    width: 20%;
+}
+
+.tbl-2 thead th:nth-child(3) {
+    width: 20%;
+}
+
+.tbl-2 thead th:nth-child(4) {
+    width: 10%;
+}
+
+
+
+
+/* stylowanie przycisków typu svg */
 button {
-	background-color: inherit;
-	outline: none;
-	border: none;
-	cursor: pointer;
-	transition: 0.2s;
-	line-height: 100%;
+    background-color: inherit;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+    line-height: 100%;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* stylowanie kwadratu w tle */
+
+.square {
+
+    position: absolute;
+    left: -2.4%;
+    right: 10.22%;
+    top: 7.49%;
+    bottom: 10.6%;
+    background: #F2F2F2;
+    border-radius: 20px;
+    transform: rotate(5deg);
+    z-index: -1;
+    /* opacity: .6; */
 }

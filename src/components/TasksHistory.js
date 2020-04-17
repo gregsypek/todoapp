@@ -22,7 +22,7 @@ const TaskListDone = (props) => {
 	return (
 		<>
 			<div className="done">
-				<table>
+				<table className="tbl-2">
 					<thead>
 						<tr>
 							<th>Zadania zrobione</th>

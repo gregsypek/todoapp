@@ -3,6 +3,7 @@ import TaskActive from "./TaskActive";
 
 const TasksListActive = (props) => {
 	const active = props.tasks.filter((task) => task.active);
+	console.log(active.lenght);
 
 	if (active.length >= 2) {
 		active.sort((a, b) => {
@@ -12,6 +13,7 @@ const TasksListActive = (props) => {
 			return a - b;
 		});
 	}
+
 	const activeTasks = active.map((task) => (
 		<TaskActive
 			key={task.id}
@@ -25,7 +27,7 @@ const TasksListActive = (props) => {
 	return (
 		<>
 			<div className="active">
-				<table>
+				<table className="tbl-1">
 					<thead>
 						<tr>
 							<th>Zadania do zrobienia</th>

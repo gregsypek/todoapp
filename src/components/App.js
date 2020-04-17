@@ -9,6 +9,7 @@ import logo from "../images/logo.svg";
 
 import "../styles/App.css";
 import "../styles/Main.css";
+import "../styles/Footer.css";
 class App extends Component {
 	//ustaw counter na podstawie tablicy
 	counter = 9;
@@ -91,17 +92,25 @@ class App extends Component {
 
 		return true;
 	};
+
+	// const ForPlentyTask = {
+	// 			'max-height': 'none',
+
+	// }
 	render() {
 		return (
 			<Router>
 				<div className="container">
 					<div className="app ">
 						<Navigation />
-						<header>{<AddTask add={this.addTask} />}</header>
+
+						<header>
+							<Route path="/" exact render={() => <AddTask add={this.addTask} />} />
+						</header>
 						<section>
 							<aside>
-								<img class="logo" src={logo} alt={`logo ${logo}`} />
-								<img class="img" src={image} alt={`picutre ${image}`} />
+								<img className="logo" src={logo} alt={`logo ${logo}`} />
+								<img className="img" src={image} alt={`picutre ${image}`} />
 							</aside>
 							<main>
 								<Switch>
@@ -136,6 +145,7 @@ class App extends Component {
 										)}
 									/>
 								</Switch>
+								<div className="square"></div>
 							</main>
 						</section>
 						<footer>

@@ -4,7 +4,7 @@ import x from "../images/usun.svg";
 
 const TaskActive = (props) => {
 	const importantStyle = {
-		color: "red",
+		color: "#EB5757",
 	};
 	const { text, date, id, important } = props.task;
 	return (
@@ -13,12 +13,12 @@ const TaskActive = (props) => {
 			<td>{date}</td>
 			<td>
 				<button onClick={() => props.change(id)}>
-					<img class="ok" src={ok} alt={`ok ${ok}`} />
+					<img className="ok" src={ok} alt={`ok ${ok}`} />
 				</button>
 			</td>
 			<td>
 				<button onClick={() => props.delete(id)}>
-					<img class="x" src={x} alt={`x button ${x}`} />
+					<img className="x" src={x} alt={`x button ${x}`} />
 				</button>
 			</td>
 		</tr>

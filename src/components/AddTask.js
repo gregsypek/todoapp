@@ -40,7 +40,7 @@ class AddTask extends Component {
 				});
 			}
 		} else {
-			alert("wprowadz zadanie");
+			alert("Wprowadź zadanie z conajmniej dwóch liter!");
 		}
 	};
 	render() {

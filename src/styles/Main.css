@@ -11,10 +11,32 @@ aside {
     justify-content: space-between;
 }
 
+@media(max-width: 1100px) {
+    aside {
+        flex-basis: 25%;
+    }
+}
+
+@media(max-width: 700px) {
+    aside {
+        flex-basis: 15%;
+    }
+}
+
+@media(max-width: 600px) {
+    aside {
+        flex-basis: 10%;
+    }
+}
+
 main {
     position: relative;
     z-index: 2;
     width: 90%;
+}
+
+.img {
+    height: 44vh;
 }
 
 .logo {
@@ -22,14 +44,36 @@ main {
     height: 6rem;
 }
 
+@media(max-width: 900px) {
+    .logo {
+        position: absolute;
+        top: 6rem;
+        left: -1rem;
+        width: 8rem;
+        height: 4rem;
+    }
+}
+
+@media(max-width: 600px) {
+    .logo {
+        display: none;
+    }
+
+}
+
+@media(max-width: 600px) {
+
+    .img {
+        display: none;
+    }
+}
+
 .img {
     height: 44vh;
 }
 
-/*  stylowanie tabel wspolne */
 
 table {
-
     margin-top: 2rem;
     width: 90%;
     font-style: italic;
@@ -51,6 +95,19 @@ tbody td {
 thead>tr {
     line-height: 3rem;
     color: #57B894;
+    font-size: 1.3rem;
+}
+
+@media(max-width:900px) {
+    thead>tr {
+        font-size: 1rem;
+    }
+}
+
+@media(max-width:500px) {
+    thead>tr {
+        font-size: .8rem;
+    }
 }
 
 tbody>tr>th {
@@ -72,7 +129,6 @@ tbody>tr:nth-of-type(2n) {
     opacity: 0.85;
     color: #E5E5E5;
 }
-
 
 /* stylowanie tabeli tbl-1 */
 .tbl-1 thead {
@@ -98,36 +154,48 @@ tbody>tr:nth-of-type(2n) {
     width: 10%;
 }
 
-
 /* stylowanie tabeli tbl-2 */
-
-
 
 .tbl-2 thead {
     background-color: #3F3D56;
-
 }
 
 .tbl-2 thead th:nth-child(1) {
-    width: 50%;
+    width: 46%;
     text-align: left;
     padding-left: 0.5rem;
 }
 
 .tbl-2 thead th:nth-child(2) {
-    width: 20%;
+    width: 22%;
 }
 
 .tbl-2 thead th:nth-child(3) {
-    width: 20%;
+    width: 22%;
 }
 
 .tbl-2 thead th:nth-child(4) {
     width: 10%;
 }
 
+@media(max-width: 600px) {
 
+    .tbl-2 thead>tr {
+        line-height: 2rem;
+        font-size: .8rem;
+    }
+}
 
+@media(max-width: 500px) {
+    .tbl-2 thead th:nth-child(1) {
+        width: 40%;
+    }
+
+    .tbl-2 thead>tr {
+        line-height: 2rem;
+        font-size: .7rem;
+    }
+}
 
 /* stylowanie przycisków typu svg */
 button {
@@ -146,7 +214,6 @@ button:hover {
 /* stylowanie kwadratu w tle */
 
 .square {
-
     position: absolute;
     left: -2.4%;
     right: 10.22%;
@@ -156,5 +223,4 @@ button:hover {
     border-radius: 20px;
     transform: rotate(5deg);
     z-index: -1;
-    /* opacity: .6; */
 }

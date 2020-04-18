@@ -18,6 +18,25 @@ body {
     color: white;
 }
 
+@media(max-width:1200px) {
+    body {
+        font-size: 1rem;
+    }
+}
+
+@media(max-width:900px) {
+    body {
+        font-size: .8rem;
+    }
+}
+
+@media(max-width: 450px) {
+    body {
+        font-size: .6rem;
+    }
+
+}
+
 .container {
     display: flex;
     min-height: 100vh;

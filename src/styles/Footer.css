@@ -6,3 +6,9 @@ footer small {
     display: flex;
     justify-content: flex-end;
 }
+
+@media(max-width: 600px) {
+    footer small {
+        font-size: .4rem;
+    }
+}

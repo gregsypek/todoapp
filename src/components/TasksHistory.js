@@ -31,8 +31,8 @@ const TaskListDone = (props) => {
 							<th>Usuń</th>
 						</tr>
 					</thead>
-					{/* slice wyswietli tylko 10 */}
-					<tbody>{doneTasks.slice(0, 10)}</tbody>
+
+					<tbody>{doneTasks}</tbody>
 				</table>
 			</div>
 		</>

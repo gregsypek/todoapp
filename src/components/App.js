@@ -10,6 +10,11 @@ import logo from "../images/logo.svg";
 import "../styles/App.css";
 import "../styles/Main.css";
 import "../styles/Footer.css";
+
+const forPlentyTask = {
+	maxHeight: "none",
+};
+
 class App extends Component {
 	//ustaw counter na podstawie tablicy
 	counter = 9;
@@ -93,15 +98,14 @@ class App extends Component {
 		return true;
 	};
 
-	// const ForPlentyTask = {
-	// 			'max-height': 'none',
-
-	// }
 	render() {
 		return (
 			<Router>
 				<div className="container">
-					<div className="app ">
+					<div
+						className="app"
+						style={this.state.tasks.length > 10 ? forPlentyTask : null}
+					>
 						<Navigation />
 
 						<header>

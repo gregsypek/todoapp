@@ -42,8 +42,10 @@ input[type="date"] {
 	input[type="text"],
 	input[type="date"] {
 		margin-right: 0.5rem;
-		height: 1.8rem;
-		margin-bottom: 0.5rem;
+		/* height: 1.8rem; */
+		/* margin-bottom: 5px; */
+		border: 5px solid #e5e5e5;
+		box-shadow: none;
 	}
 }
 
@@ -117,7 +119,7 @@ label:nth-of-type(2) {
 	.form button {
 		font-size: 1rem;
 		width: 8rem;
-		height: 1.8rem;
+		height: 1.6rem;
 		padding: 0.2rem 1rem;
 	}
 }
@@ -125,6 +127,12 @@ label:nth-of-type(2) {
 @media (max-width: 700px) {
 	.form button {
 		margin-left: 1rem;
+	}
+}
+@media (max-width: 400px) {
+	.form button {
+		margin-left: 1rem;
+		margin-top: 1rem;
 	}
 }
 

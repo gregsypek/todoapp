@@ -1,148 +1,141 @@
 .form {
-    display: flex;
-    padding: 1rem;
-    align-items: center;
-    justify-content: flex-end;
+	display: flex;
+	padding: 1rem;
+	align-items: center;
+	justify-content: space-between;
 }
 
-@media(max-width:700px) {
+@media (max-width: 700px) {
+	.form {
+		padding: 0.5rem;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
 
-    .form {
-        display: flex;
-        padding: .5rem;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+@media (min-width: 1000px) {
+	input[type="text"] {
+		margin-left: 7rem;
+	}
 }
 
 input[type="text"],
 input[type="date"] {
-    font-size: inherit;
-    font-family: "Lobster Two", cursive, "sans-serif";
-    background-color: #3f3d56;
-    color: #f2f2f2;
-    border: 4px solid #3f3d56;
-    padding: 0.4rem 1.2rem;
-    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    line-height: 100%;
-    margin-right: 1.8rem;
-    height: 2.2rem;
-    outline: none;
-    transition: all .2s;
-    font-style: italic;
-    text-align: center;
-
+	font-size: inherit;
+	font-family: "Lobster Two", cursive, "sans-serif";
+	background-color: #3f3d56;
+	color: #f2f2f2;
+	border: 4px solid #3f3d56;
+	padding: 0.4rem 1.2rem;
+	box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+	line-height: 100%;
+	margin-right: 1.8rem;
+	height: 2.2rem;
+	outline: none;
+	transition: all 0.2s;
+	font-style: italic;
+	text-align: center;
 }
 
-@media(max-width: 900px) {
-
-    input[type="text"],
-    input[type="date"] {
-
-        padding: 0.3rem 1rem;
-        box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.25);
-        border-radius: 20px;
-        line-height: 100%;
-        margin-right: .5rem;
-        height: 2rem;
-    }
-}
-
-@media(max-width: 600px) {
-
-    input[type="text"],
-    input[type="date"] {
-
-        padding: 0.1rem .5rem;
-        box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.25);
-        border-radius: 20px;
-        margin-right: .5rem;
-
-    }
+@media (max-width: 900px) {
+	input[type="text"],
+	input[type="date"] {
+		margin-right: 0.5rem;
+		height: 1.8rem;
+		margin-bottom: 0.5rem;
+	}
 }
 
 ::placeholder,
 input[type="date"] {
-    color: #f2f2f2;
-    opacity: 1;
-    font-size: 1rem;
+	color: #f2f2f2;
+	opacity: 1;
+	font-size: 1rem;
 }
 
-@media(max-width:900px) {
-
-    ::placeholder,
-    input[type="date"] {
-        font-size: .8rem;
-    }
+@media (max-width: 900px) {
+	::placeholder,
+	input[type="date"] {
+		font-size: 0.8rem;
+	}
 }
 
 input[type="date"] {
-    margin-right: 3rem;
+	margin-right: 3rem;
 }
 
-@media(max-width:900px) {
-
-    input[type="date"] {
-        margin-right: 1rem;
-    }
+@media (max-width: 900px) {
+	input[type="date"] {
+		margin-right: 1rem;
+	}
 }
 
 input[type="checkbox"] {
-    margin-right: .8rem;
+	margin-right: 0.8rem;
 }
 
 label {
-    color: #2f2e41;
-    margin-right: 3rem;
-    font-style: italic;
+	color: #2f2e41;
+	margin-right: 1rem;
+	font-style: italic;
+}
+
+@media (max-width: 450px) {
+	label {
+		font-size: 0.8rem;
+	}
 }
 
 label:nth-of-type(2) {
-    margin-right: .8rem;
+	margin-right: 0.8rem;
 }
 
 .form button {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.1rem;
-    line-height: 30px;
-    width: 8rem;
-    height: 2.2rem;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    transition: 0.2s;
-    color: #2f2e41;
-    background: #f2f2f2;
-    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    text-transform: uppercase;
-    font-family: inherit;
-    padding: 0.2rem 1.2rem;
-    text-align: center;
-    margin-right: 2rem;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1.1rem;
+	/* line-height: 30px; */
+	width: 8rem;
+	height: 2rem;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	transition: 0.2s;
+	color: #2f2e41;
+	background: #f2f2f2;
+	box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+	text-transform: uppercase;
+	font-family: inherit;
+	padding: 0.2rem 1.2rem;
+	text-align: center;
+	margin-right: 2rem;
 }
 
-@media(max-width:700px) {
+@media (max-width: 700px) {
+	.form button {
+		font-size: 1rem;
+		width: 8rem;
+		height: 1.8rem;
+		padding: 0.2rem 1rem;
+	}
+}
 
-    .form button {
-        font-size: 1rem;
-        width: 8rem;
-        height: 2rem;
-        padding: 0.2rem 1rem;
-    }
+@media (max-width: 700px) {
+	.form button {
+		margin-left: 1rem;
+	}
 }
 
 .form button:hover {
-    background-color: #57b894;
-    color: #f2f2f2;
+	background-color: #57b894;
+	color: #f2f2f2;
 }
 
 input[type="text"]:hover,
 input[type="date"]:hover,
 .form button:hover {
-    transform: scale(1.1);
-    cursor: pointer;
+	transform: scale(1.1);
+	cursor: pointer;
 }

@@ -55,22 +55,26 @@ class AddTask extends Component {
 					value={this.state.text}
 					onChange={this.handleText}
 				/>
-				<input
-					type="checkbox"
-					checked={this.state.checked}
-					id="important"
-					onChange={this.handleCheck}
-				/>
-				<label htmlFor="important">priorytet</label>
-				<label htmlFor="date">do kiedy...</label>
-				<input
-					type="date"
-					value={this.state.date}
-					min={this.minDate}
-					max={maxDate}
-					onChange={this.handleDate}
-					id="date"
-				/>
+				<div>
+					<input
+						type="checkbox"
+						checked={this.state.checked}
+						id="important"
+						onChange={this.handleCheck}
+					/>
+					<label htmlFor="important">priorytet</label>
+				</div>
+				<div>
+					<label htmlFor="date">do kiedy...</label>
+					<input
+						type="date"
+						value={this.state.date}
+						min={this.minDate}
+						max={maxDate}
+						onChange={this.handleDate}
+						id="date"
+					/>
+				</div>
 				<button onClick={this.handleClick}>dodaj</button>
 			</div>
 		);

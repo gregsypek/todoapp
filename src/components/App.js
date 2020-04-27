@@ -100,7 +100,7 @@ class App extends Component {
 
 	render() {
 		return (
-			<Router>
+			<Router basename={process.env.PUBLIC_URL}>
 				<div className="container">
 					<div
 						className="app"
@@ -109,7 +109,11 @@ class App extends Component {
 						<Navigation />
 
 						<header>
-							<Route path="/" exact render={() => <AddTask add={this.addTask} />} />
+							<Route
+								path="/"
+								exact
+								render={() => <AddTask add={this.addTask} />}
+							/>
 						</header>
 						<section>
 							<aside>
